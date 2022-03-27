@@ -1,6 +1,8 @@
 #  Concrete files #
 ############
 # nombres de archivos a ignorar
+.ipynb_checkpoints/
+
 
 # Compiled source #
 ###################

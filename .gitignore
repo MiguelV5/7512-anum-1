@@ -20,6 +20,8 @@
 *.bib
 *.jpeg
 *.png
+*.synctex(busy)
+*.synctex
 
 # Compiled source #
 ###################

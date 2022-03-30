@@ -1,8 +1,25 @@
 #  Concrete files #
 ############
 # nombres de archivos a ignorar
+
+#cache de jupyter:
 .ipynb_checkpoints/
 
+#tex related:
+*.pdf
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.gz
+*.xml
+*.bib
+*.jpeg
+*.png
 
 # Compiled source #
 ###################

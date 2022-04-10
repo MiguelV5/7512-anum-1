@@ -14,7 +14,7 @@ def biseccion(f, a, b, tolerancia, n_recursion = 0):
     p_n = (a+b)/2
     
     if  abs(f(p_n)) <= tolerancia :
-        print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {p_n} ; En iteracion nro: {n_recursion} ")
+        print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {p_n} ; En iteracion nro: {n_recursion} \n")
         p_n
     else:
         print(f"\n [Tolerancia no alcanzada aun]  Valor actual de p_n: {p_n} ; En iteracion nro: {n_recursion} ")

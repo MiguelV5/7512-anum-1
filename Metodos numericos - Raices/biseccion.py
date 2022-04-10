@@ -25,6 +25,6 @@ def biseccion(f, a, b, tolerancia, n_recursion = 0):
             biseccion(f, p_n, b, tolerancia, n_recursion+1)
 
     
-
+#ejercicio 1 guia 2:
 raiz = biseccion(lambda x: math.e**x * (math.sin(x) + math.cos(x) - 2*x - 2), -2.5, -0.5, 0.00001)
 

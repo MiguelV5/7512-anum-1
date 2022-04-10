@@ -4,16 +4,16 @@ import math
 def biseccion(f, a, b, tolerancia, n_recursion = 0):
     
     #en caso de que a o b sean cercanas a la raiz p
-    if abs(f(a)) <= tolerancia :
+    if abs(f(a)) < tolerancia :
         print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {a} ; En iteracion nro: {n_recursion} ")
         a
-    elif  abs(f(b)) <= tolerancia :
+    elif  abs(f(b)) < tolerancia :
         print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {b} ; En iteracion nro: {n_recursion} ")
         b
     
     p_n = (a+b)/2
     
-    if  abs(f(p_n)) <= tolerancia :
+    if  abs(f(p_n)) < tolerancia :
         print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {p_n} ; En iteracion nro: {n_recursion} \n")
         p_n
     else:

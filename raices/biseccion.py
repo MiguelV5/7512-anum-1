@@ -1,4 +1,4 @@
-from util import *
+from util import (imprimir_tabla,START,ROOT_FOUND,ROOT_NOT_FOUND_YET) 
 import math
 
 

@@ -1,4 +1,4 @@
-from util import *
+from util import iteracion_funcional
 import math
 
 #Notar que se requiere la g, NO la f a la que se le quiere calcular la raiz. Por lo tanto se debe asegurar que la g ES FUNCIÓN ADMISIBLE: 

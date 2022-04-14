@@ -2,6 +2,7 @@
 ############
 # nombres de archivos a ignorar
 
+__pycache__/
 #cache de jupyter:
 .ipynb_checkpoints/
 

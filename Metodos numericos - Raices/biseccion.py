@@ -31,7 +31,7 @@ import math
 
 
 # a y b son delimitadores del intervalo [a,b]; f es la funcion a buscar su raiz en dicho intervalo. prev_p_n es p_n-1 para el criterio de paro
-def biseccion(f, a, b, tolerancia, n_recursion = 1, prev_p_n = 0): #BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| < tolerancia
+def biseccion(f, a, b, tolerancia, n_recursion = 1, prev_p_n = 0): #BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| <= tolerancia EXCEPTUANDO PRIMERA ITERACION (Porque alli no existe p_n-1)
   
     p_n = (a+b)/2
     

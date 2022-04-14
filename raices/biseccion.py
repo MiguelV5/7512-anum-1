@@ -3,53 +3,25 @@ import math
 
 
 # a y b son delimitadores del intervalo [a,b]; f es la funcion a buscar su raiz en dicho intervalo.
-#def biseccion(f, a, b, tolerancia, n_recursion = 1): #BISECCION CON CRITERIO DE PARO: |f(p_n)| < tolerancia
-#    
-#    #en caso de que a o b sean cercanas a la raiz p
-#    #if abs(f(a)) < tolerancia :
-#    #    print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {a} ; En iteracion nro: {n_recursion} ")
-#    #    a
-#    #elif  abs(f(b)) < tolerancia :
-#    #    print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {b} ; En iteracion nro: {n_recursion} ")
-#    #    b
-#    
-#    p_n = (a+b)/2
-#    err = abs(f(p_n))
-#    if  err < tolerancia :
-#        print(f"\n [Aprox con tolerancia adecuada]  Raiz encontrada: p == {p_n} ; En iteracion nro: {n_recursion} \n")
-#        p_n
-#    else:
-#        print(f"\n [Tolerancia no alcanzada aun]  Valor actual de p_n: {p_n} ; En iteracion nro: {n_recursion} ")
-#
-#        if f(p_n)*f(a) < 0:
-#            biseccion(f, a, p_n, tolerancia, n_recursion+1)
-#        else:
-#            biseccion(f, p_n, b, tolerancia, n_recursion+1)
-
-
-
-
-
-# a y b son delimitadores del intervalo [a,b]; f es la funcion a buscar su raiz en dicho intervalo. prev_p_n es p_n-1 para el criterio de paro
-def biseccion(f, a, b, tolerancia, n_recursion = 1, prev_p_n = 0): #BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| <= tolerancia EXCEPTUANDO PRIMERA ITERACION (Porque alli no existe p_n-1)
+def biseccion(f, a, b, tolerancia, n_recursion = 1, p__n_1 = 0): #BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| <= tolerancia EXCEPTUANDO PRIMERA ITERACION (Porque alli no existe p_n-1)
   
-    p_n = (a+b)/2
+    p__n = (a+b)/2
     
     if n_recursion == 1:
         imprimir_tabla(START)
-        err = abs(f(p_n)) #PREV_P_N NO PUEDE USARSE CON VALOR CERO!!!!
+        err = abs(f(p__n)) # p__n-1 NO PUEDE USARSE CON VALOR CERO!!!!
     else:
-        err = abs(p_n - prev_p_n)
+        err = abs(p__n - p__n_1)
 
     if err <= tolerancia :
-        imprimir_tabla(ROOT_FOUND, p_n, n_recursion, err)
-        p_n
+        imprimir_tabla(ROOT_FOUND, p__n, n_recursion, err)
+        p__n
     else:
-        imprimir_tabla(ROOT_NOT_FOUND_YET, p_n, n_recursion, err)
-        if f(p_n)*f(a) < 0:
-            biseccion(f, a, p_n, tolerancia, n_recursion+1, p_n)
+        imprimir_tabla(ROOT_NOT_FOUND_YET, p__n, n_recursion, err)
+        if f(p__n)*f(a) < 0:
+            biseccion(f, a, p__n, tolerancia, n_recursion+1, p__n)
         else:
-            biseccion(f, p_n, b, tolerancia, n_recursion+1, p_n)
+            biseccion(f, p__n, b, tolerancia, n_recursion+1, p__n)
 
 
 

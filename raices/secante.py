@@ -1,5 +1,5 @@
 from util import (imprimir_tabla, START, ROOT_FOUND, ROOT_NOT_FOUND_YET)
-import math
+#import math
 
 
 #Al llamarse inicialmente p__n-1 debe ser la semilla_1; p__n-2 debe ser la semilla_0
@@ -43,4 +43,4 @@ def secante(f, tolerancia, semilla_1, semilla_0) :  #Secante CON CRITERIO DE PAR
 
 # Aunque creía que por lo general convendria que las semillas estuviese "rodeando" una a cada lado de la raiz real, esto no siempre se cumple y en realidad depende muchisimo de como es la función y de las semillas que se den.
 #  Comparar iteraciones con la anterior:
-raiz = secante(lambda x: x**10 - 1 , 0.01, 1.3, 0.8) #tuvo 8 iteraciones, por culpa de que la recta secante inicial.
+#raiz = secante(lambda x: x**10 - 1 , 0.01, 1.3, 0.8) #tuvo 8 iteraciones, por culpa de que la recta secante inicial.

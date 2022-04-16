@@ -31,8 +31,8 @@ def imprimir_tabla(table_code, p_n = 0, n_iteracion = 0, err = 9999) :
         print(f" {bcolors.HEADER} [========================================//========================================] {bcolors.ENDC}\n")
 
 
-#Iteración funcional p_n = g(p_n-1) para todo n>=1  con:  g(x) = x - @(x)*f(x) ;   y   |p_n - p_n-1| <= tolerancia.
-#Notar que se requiere la g, NO la f a la que se le quiere calcular la raiz. Por lo tanto se debe asegurar que la g ES FUNCIÓN ADMISIBLE (SEGUN SEA QUE ESTA FUNCION SE USE CON PUNTO_FIJO O CON NR)
+# Iteración funcional p_n = g(p_n-1) para todo n>=1  con:  g(x) = x - @(x)*f(x) ;   y   |p_n - p_n-1| <= tolerancia.
+# Notar que se requiere la g, NO la f a la que se le quiere calcular la raiz. Por lo tanto se debe asegurar que la g ES FUNCIÓN ADMISIBLE (SEGUN SEA QUE ESTA FUNCION SE USE CON PUNTO_FIJO O CON NR)
 # Al llamarse por primera vez p__n-1 DEBE SER LA SEMILLA.
 def iteracion_funcional(g, tolerancia, p__n_1, n_recursion = 1) :
 

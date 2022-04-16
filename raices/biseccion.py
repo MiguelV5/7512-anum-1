@@ -1,9 +1,11 @@
 from util import (imprimir_tabla,START,ROOT_FOUND,ROOT_NOT_FOUND_YET) 
-import math
+#import math
 
 
 # a y b son delimitadores del intervalo [a,b]; f es la funcion a buscar su raiz en dicho intervalo.
-def biseccion(f, a, b, tolerancia, n_recursion = 1, p__n_1 = 0): #BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| <= tolerancia EXCEPTUANDO PRIMERA ITERACION (Porque alli no existe p_n-1)
+# 
+# BISECCION CON CRITERIO DE PARO: |p_n - p_n-1| <= tolerancia EXCEPTUANDO PRIMERA ITERACION (Porque alli no existe p_n-1)
+def biseccion(f, a, b, tolerancia, n_recursion = 1, p__n_1 = 0):
   
     p__n = (a+b)/2
     
@@ -27,5 +29,5 @@ def biseccion(f, a, b, tolerancia, n_recursion = 1, p__n_1 = 0): #BISECCION CON 
 
     
 #ejercicio 1 guia 2:
-raiz = biseccion(lambda x: math.e**x * (math.sin(x) + math.cos(x) - 2*x - 2), -2.5, -0.5, 0.00001)
+#raiz = biseccion(lambda x: math.e**x * (math.sin(x) + math.cos(x) - 2*x - 2), -2.5, -0.5, 0.00001)
 

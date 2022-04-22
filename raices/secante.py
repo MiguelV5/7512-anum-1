@@ -1,4 +1,4 @@
-from util import (imprimir_tabla, START, ROOT_FOUND, ROOT_NOT_FOUND_YET)
+from util import (imprimir_tabla, START, ROOT_FOUND, ROOT_NOT_FOUND_YET, ROOT_WITH_WARNING, TOLERANCIA_MAXIMA, ITER_MAXIMAS)
 #import math
 
 
@@ -13,6 +13,9 @@ def iteracion_funcional_de_dos_semillas(g, tolerancia, p__n_1, p__n_2, n_recursi
 
     if err <= tolerancia :
         imprimir_tabla(ROOT_FOUND, p_n, n_recursion, err)
+        p_n
+    elif (err <= TOLERANCIA_MAXIMA) or (n_recursion >= ITER_MAXIMAS): #en caso de llegar al maximo representable o que lleve demasiadas iteraciones
+        imprimir_tabla(ROOT_WITH_WARNING, p_n, n_recursion, err)
         p_n
     else:
         imprimir_tabla(ROOT_NOT_FOUND_YET, p_n, n_recursion, err)

@@ -1,4 +1,4 @@
-from util import (imprimir_tabla,START,ROOT_FOUND,ROOT_NOT_FOUND_YET) 
+from util import (imprimir_tabla,START,ROOT_FOUND,ROOT_NOT_FOUND_YET, ROOT_WITH_WARNING, TOLERANCIA_MAXIMA, ITER_MAXIMAS) 
 #import math
 
 
@@ -18,6 +18,10 @@ def biseccion(f, a, b, tolerancia, n_recursion = 1, p__n_1 = 0):
     if err <= tolerancia :
         imprimir_tabla(ROOT_FOUND, p__n, n_recursion, err)
         p__n
+    elif (err <= TOLERANCIA_MAXIMA) or (n_recursion >= ITER_MAXIMAS): #en caso de llegar al maximo representable o que lleve demasiadas iteraciones
+        imprimir_tabla(ROOT_WITH_WARNING, p__n, n_recursion, err)
+        p__n
+
     else:
         imprimir_tabla(ROOT_NOT_FOUND_YET, p__n, n_recursion, err)
         if f(p__n)*f(a) < 0:

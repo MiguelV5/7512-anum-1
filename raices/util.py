@@ -10,6 +10,11 @@ class bcolors:
 START = 0
 ROOT_NOT_FOUND_YET = 1
 ROOT_FOUND = 2
+ROOT_WITH_WARNING = 3
+TOLERANCIA_MAXIMA = 1e-15
+ITER_MAXIMAS = 500
+
+
 
 err_with___pn__pn_1 = 0
 err_with___pn__pn_1_over_pn = 1
@@ -28,6 +33,11 @@ def imprimir_tabla(table_code, p_n = 0, n_iteracion = 0, err = 9999) :
         
     elif table_code == ROOT_FOUND:
         print(f"     {bcolors.OKGREEN}{n_iteracion}{bcolors.ENDC}                 {bcolors.OKGREEN}{p_n}{bcolors.ENDC}                 {bcolors.OKGREEN}{err}{bcolors.ENDC} \n")
+        print(f" {bcolors.HEADER} [========================================//========================================] {bcolors.ENDC}\n")
+
+    elif table_code == ROOT_WITH_WARNING:
+        print(f"     {bcolors.WARNING}{n_iteracion}{bcolors.ENDC}                 {bcolors.WARNING}{p_n}{bcolors.ENDC}                 {bcolors.WARNING}{err}{bcolors.ENDC} \n")
+        print(f" {bcolors.WARNING} [WARNING] El algoritmo se detuvo aquí.\n            La busqueda realizó un valor muy alto de iteraciones; o la tolerancia dada fue demasiado precisa y se llegó al máximo representable. {bcolors.ENDC}\n")
         print(f" {bcolors.HEADER} [========================================//========================================] {bcolors.ENDC}\n")
 
 

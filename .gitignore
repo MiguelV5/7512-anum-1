@@ -5,6 +5,8 @@
 __pycache__/
 #cache de jupyter:
 .ipynb_checkpoints/
+#config local de vs:
+# .vscode/
 
 #tex related:
 *.pdf

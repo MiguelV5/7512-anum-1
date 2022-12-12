@@ -1,4 +1,4 @@
-## Análisis numérico I - 1c 2022
+## Análisis numérico I - 1c 2022 - Curso Sassano
 
 Repositorio correspondiente a jupyter notebooks / tps de la materia (75.12 - FIUBA - 1c 2022)
 
